@@ -14,16 +14,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Play"
-        android:clickable="true"/>
+        android:clickable="true"
+        android:text="Play"/>
 
     <Button
         android:id="@+id/pause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pause"
+        android:layout_marginBottom="16dp"
         android:clickable="true"
-        android:layout_marginBottom="16dp"/>
+        android:text="Pause"/>
 
 </LinearLayout>
 
