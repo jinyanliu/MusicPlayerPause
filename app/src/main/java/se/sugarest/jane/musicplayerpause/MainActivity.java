@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.east);
+        mediaPlayer = MediaPlayer.create(this, R.raw.tequila);
 
         play = (Button) findViewById(R.id.play);
         pause = (Button) findViewById(R.id.pause);
@@ -36,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Pausing", Toast.LENGTH_SHORT).show();
                 mediaPlayer.pause();
+            }
+        });
+
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+                Toast.makeText(getApplicationContext(), "It's finished!", Toast.LENGTH_SHORT).show();
             }
         });
     }
